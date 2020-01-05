@@ -1,0 +1,31 @@
+.input {
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 3px;
+  background: var(--grey);
+  cursor: text;
+}
+
+.input__label {
+  position: absolute;
+  top: 1em;
+  font-size: 1rem;
+  color: var(--yellow);
+  transition: top 0.2s ease;
+}
+
+.input:not(:placeholder-shown) ~ .input__label,
+.input:focus ~ .input__label {
+  top: 0.1em;
+  font-size: 0.8rem;
+}

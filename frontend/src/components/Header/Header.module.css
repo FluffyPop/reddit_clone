@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5em;
+  padding: 0 2em;
+  background: var(--black);
+}
+
+.left_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_header > *:not(:last-child) {
+  margin-right: 1em;
+}
+
+.right_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_header > *:not(:last-child) {
+  margin-right: 1em;
+}
+
+.header__logo {
+  font-size: 3rem;
+  color: var(--yellow);
+}
+
+.header__logo__link {
+  display: flex;
+  color: inherit;
+}
