@@ -7,7 +7,6 @@ import PostCard from '../../components/PostCard';
 export const Posts = () => {
   return (
     <div className={styles.posts}>
-      <span>Posts</span>
       <PostCard />
     </div>
   );

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import styles from './Sidebar.module.css';
-import slideTransition from '../../cssTransitions/leftSlide.module.css';
 import widthTransition from '../../cssTransitions/width.module.css';
 
-export const Sidebar = ({ show }) => {
+export const Sidebar = ({ show, fetchSubreddits, subreddits }) => {
+  useEffect(() => {
+    fetchSubreddits();
+  }, []);
+
   return (
     <CSSTransition
       in={show}
@@ -16,6 +19,9 @@ export const Sidebar = ({ show }) => {
     >
       <aside className={styles.sidebar}>
         <span>Sidebar</span>
+        {subreddits.map(sub => (
+          <span>{sub}</span>
+        ))}
       </aside>
     </CSSTransition>
   );

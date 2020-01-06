@@ -65,13 +65,13 @@ const register = async (req, res, next) => {
       )
     });
     // Remove password from user
-    const { password, ...res } = newUser;
+    const { password: omit, ...rest } = newUser;
     // Send tokens and user
     res.status(201).json({
       status: 'success',
       token: accessToken,
       data: {
-        user: res
+        user: rest
       }
     });
   } catch (e) {

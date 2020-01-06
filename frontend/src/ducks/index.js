@@ -3,10 +3,12 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 
 import { user } from './user';
 import { modals } from './modals';
+import { subreddits } from './subreddits';
 
 // Root reducer
 const reducer = combineReducers({
   user,
+  subreddits,
   modals
 });
 // Activate redux dev tools
