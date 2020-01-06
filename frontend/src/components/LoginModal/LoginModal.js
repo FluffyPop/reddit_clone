@@ -12,9 +12,13 @@ export const LoginModal = ({ show, toggleLogin }) => {
 
   const update = fn => event => fn(event.target.value);
 
+  const handleLoginSubmit = event => {
+    event.preventDefault();
+  };
+
   return (
     <Modal show={show} close={toggleLogin}>
-      <form className={styles.login__form}>
+      <form className={styles.login__form} onSubmit={handleLoginSubmit}>
         <Input
           label='Name'
           type='text'

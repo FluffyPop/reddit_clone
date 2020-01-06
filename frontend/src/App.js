@@ -6,6 +6,7 @@ import Header from './components/Header';
 import { Footer } from './components/Footer';
 import RegisterModal from './components/RegisterModal';
 import LoginModal from './components/LoginModal';
+import Sidebar from './components/Sidebar';
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
         <Header />
         <RegisterModal />
         <LoginModal />
+        <Sidebar />
         <Switch>
           <Route path='/' exact>
             <Posts />

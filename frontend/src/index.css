@@ -15,8 +15,9 @@ body {
 
 .app {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   overflow-y: scroll;
 }
 

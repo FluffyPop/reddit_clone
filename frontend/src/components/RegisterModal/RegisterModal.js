@@ -14,9 +14,15 @@ export const RegisterModal = ({ show, toggleRegister }) => {
 
   const update = fn => event => fn(event.target.value);
 
+  const handleRegisterSubmit = event => {
+    event.preventDefault();
+
+    console.log(name, email, password, confirmPassword);
+  };
+
   return (
     <Modal show={show} close={toggleRegister}>
-      <form className={styles.register__form}>
+      <form className={styles.register__form} onSubmit={handleRegisterSubmit}>
         <Input
           label='Name'
           type='text'

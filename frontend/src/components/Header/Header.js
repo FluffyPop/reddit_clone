@@ -6,11 +6,11 @@ import styles from './Header.module.css';
 import { BurgerButton } from './components/BurgerButton';
 import Button from '../Button';
 
-export const Header = ({ toggleRegister, toggleLogin }) => {
+export const Header = ({ toggleRegister, toggleLogin, toggleSidebar }) => {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.left_header}>
-        <BurgerButton />
+        <BurgerButton onClick={toggleSidebar} />
         <Link to='/' className={styles.header__logo__link}>
           <FaRedditSquare className={styles.header__logo} />
         </Link>
@@ -19,6 +19,6 @@ export const Header = ({ toggleRegister, toggleLogin }) => {
         <Button label='Register' inversed onClick={toggleRegister} />
         <Button label='Log In' filled onClick={toggleLogin} />
       </div>
-    </div>
+    </header>
   );
 };

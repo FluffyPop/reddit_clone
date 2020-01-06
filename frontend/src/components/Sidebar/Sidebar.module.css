@@ -1,0 +1,6 @@
+.sidebar {
+  grid-row: 2/-1;
+  grid-column: 1/2;
+  width: 20vw;
+  background: var(--yellow);
+}
