@@ -4,7 +4,8 @@ exports.up = function(knex) {
     table
       .integer('user_id')
       .references('id')
-      .inTable('users');
+      .inTable('users')
+      .notNullable();
     table.string('name', 21).notNullable();
     table.timestamps(true, true);
   });

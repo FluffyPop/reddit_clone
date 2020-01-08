@@ -1,8 +1,16 @@
 .post__card {
   display: flex;
   border-radius: 3px;
+  border: 1px solid var(--light-grey);
   background: var(--light-grey);
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
+  max-width: 40em;
+}
+
+.post__card:hover {
+  border: 1px solid var(--yellow);
 }
 
 .post__card__aside {
@@ -79,6 +87,14 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
+.up__arrow:hover {
+  color: var(--red);
+}
+
+.down__arrow:hover {
+  color: var(--blue);
+}
+
 .post__card__votes {
   font-size: 0.8rem;
 }
@@ -103,6 +119,7 @@
 
 .post__card__title {
   font-size: 1.2rem;
+  word-wrap: break-word;
 }
 
 .post__card__text {
@@ -112,7 +129,7 @@
 .post__card__button {
   display: flex;
   align-items: center;
-  padding: 0.3em;
+  padding: 0.5em;
   cursor: pointer;
   border-radius: 3px;
   border: none;

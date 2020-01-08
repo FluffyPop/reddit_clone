@@ -6,14 +6,18 @@ import styles from './PostCard.module.css';
 
 export const PostCard = () => {
   return (
-    <div className={styles.post__card}>
+    <Link to='/' className={styles.post__card}>
       <aside className={styles.post__card__aside}>
         <div className={styles.post__card__arrows}>
-          <button className={styles.post__card__arrow__button}>
+          <button
+            className={`${styles.post__card__arrow__button}  ${styles.up__arrow}`}
+          >
             <FaArrowUp className={styles.post__card__arrow} />
           </button>
           <span className={styles.post__card__votes}>72k</span>
-          <button className={styles.post__card__arrow__button}>
+          <button
+            className={`${styles.post__card__arrow__button}  ${styles.down__arrow}`}
+          >
             <FaArrowDown className={styles.post__card__arrow} />
           </button>
         </div>
@@ -34,8 +38,15 @@ export const PostCard = () => {
           </Link>
         </header>
         <main className={styles.post__card__main}>
-          <span className={styles.post__card__title}>Title</span>
-          <span className={styles.post__card__text}>Text</span>
+          <span className={styles.post__card__title}>
+            What is the male equivalent of taking a bra off?
+          </span>
+          <span className={styles.post__card__text}>
+            A song came on the radio talking about how her breaking up with her
+            boyfriend was like taking her bra off. My wife mentioned that is one
+            of the best feelings. I dont really have any daily things that make
+            me feel that way. So what would be the male equivalent?
+          </span>
         </main>
         <footer className={styles.post__card__footer}>
           <button className={styles.post__card__button}>
@@ -44,6 +55,6 @@ export const PostCard = () => {
           </button>
         </footer>
       </div>
-    </div>
+    </Link>
   );
 };
